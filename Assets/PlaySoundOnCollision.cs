@@ -7,8 +7,7 @@ public class PlaySoundOnCollision : MonoBehaviour
 {
     public AudioSource strikeAudioSource;
     public AudioSource playAudioSource;
-    private GameObject Striker;
-    
+    private GameObject striker;
 
     private bool isStroking = false;
     private Vector3 strikerPosition;
@@ -23,8 +22,8 @@ public class PlaySoundOnCollision : MonoBehaviour
             AudioSource[] audioSources = GetComponents<AudioSource>();
             strikeAudioSource = audioSources[0];
             playAudioSource = audioSources[1];
-            
-            
+
+
         }
     }
     
@@ -32,20 +31,29 @@ public class PlaySoundOnCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Striker"))
         {
-            Striker = collision.gameObject;
+            striker = collision.gameObject;
+            striker = striker.transform.Find("HitBox").gameObject;
+            strikerPosition = striker.transform.position;
+            
             bowlPosition = transform.position;
-            strikerPosition = Striker.transform.position;
+            
+            Renderer renderer = transform.GetComponent<Renderer>();
+            float bowlWidth = renderer.bounds.size.x;
+            float bowlRadius = bowlWidth / 2;
+            
+            
             distanceFromCenter = Vector3.Distance(bowlPosition, strikerPosition);
-            float bowlWidth = transform.localScale.x / 2;
             
-            Debug.Log("Striker to Bowl Distance: " + distanceFromCenter);
             
-            if (distanceFromCenter < bowlWidth)
+            Debug.Log("Striker to Bowl Distance: " + distanceFromCenter + "| Bowl Radius:" + bowlRadius );
+
+            if (distanceFromCenter < bowlRadius)
             {
                 isStroking = true;
             }
             else
             {
+                Debug.Log("HIT");
                 if (strikeAudioSource.isPlaying)
                 { 
                     strikeAudioSource.Stop(); 
@@ -72,12 +80,13 @@ public class PlaySoundOnCollision : MonoBehaviour
     {
         if (isStroking)
         {
-            Vector3 currentStrikerPosition = Striker.transform.position;
+            Vector3 currentStrikerPosition = striker.transform.position;
             float movementDistance = Vector3.Distance(currentStrikerPosition, strikerPosition);
+            strikerPosition = currentStrikerPosition;
             distanceFromCenter = Vector3.Distance(currentStrikerPosition, bowlPosition);
             //Debug.Log("Stroking detected, measuring gesture, movement distance is: " + movementDistance);
             
-            if (distanceFromCenter < 0.2f && movementDistance > 0.1f)
+            if (distanceFromCenter < 0.2f && movementDistance > 0)
             {
 
                 if (!playAudioSource.isPlaying)
