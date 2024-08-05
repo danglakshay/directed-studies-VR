@@ -4187,11 +4187,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700638943}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf93899325d5df74eb9176e097ee3d4f, type: 3}
+  m_Script: {fileID: 11500000, guid: bdfbce1c081fc674a874637f7c4b9fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  striker: {fileID: 0}
-  rightHand: {fileID: 0}
   m_HandTrackingEvents: {fileID: 1902440573}
   m_HandShapeOrPose: {fileID: 11400000, guid: 7fdd2afa44a436446bdb55fa7872a77d, type: 2}
   m_TargetTransform: {fileID: 0}
@@ -4208,7 +4206,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Right Hand Thumb Up
+          m_StringArgument: Let go initiated
           m_BoolArgument: 0
         m_CallState: 2
   m_GestureEnded:
@@ -4218,6 +4216,9 @@ MonoBehaviour:
   m_GestureDetectionInterval: 0.1
   m_StaticGestures: []
   m_Highlight: {fileID: 0}
+  cylinderGrabInteractable: {fileID: 2101707271}
+  rightHandInteractor: {fileID: 2055332267}
+  interactionManager: {fileID: 1057539380}
 --- !u!1001 &1729817879
 PrefabInstance:
   m_ObjectHideFlags: 0
