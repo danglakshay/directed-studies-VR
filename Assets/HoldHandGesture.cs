@@ -1,4 +1,4 @@
-
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.XR.Hands.Gestures;
@@ -9,11 +9,11 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
     /// <summary>
     /// A gesture that detects when a hand is held in a static shape and orientation for a minimum amount of time.
     /// </summary>
-    public class StaticHandGesture : MonoBehaviour
+    public class HoldHandGesture : MonoBehaviour
     {
 
-        public GameObject striker;
-        public GameObject rightHand;
+        // public GameObject striker;
+        // public GameObject rightHand;
         [SerializeField]
         [Tooltip("The hand tracking events component to subscribe to receive updated joint data to be used for gesture detection.")]
         XRHandTrackingEvents m_HandTrackingEvents;
@@ -53,6 +53,13 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         [SerializeField]
         [Tooltip("The image component that draws the highlighted gesture icon border.")]
         Image m_Highlight;
+
+        [SerializeField]
+        public XRGrabInteractable cylinderGrabInteractable;
+        [SerializeField]
+        public XRDirectInteractor rightHandInteractor;
+        [SerializeField]
+        public XRInteractionManager interactionManager;
 
 
 
@@ -162,6 +169,7 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         {
             //m_BackgroundDefaultColor = Color.Black;
 
+
             if (m_Highlight)
             {
                 m_Highlight.enabled = false;
@@ -214,9 +222,19 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
                     //m_Background.color = m_BackgroundHighlightColor;
 
                     //Attaching striker to right hand
-                    striker.transform.parent = rightHand.transform;
-                    striker.transform.localPosition = new Vector3(0.007f, -0.093f, 0.182f);
-                    striker.transform.localEulerAngles = new Vector3(-56f, 317f, 25f);
+                    // striker.transform.parent = rightHand.transform;
+                    // striker.transform.localPosition = new Vector3(0.007f, -0.093f, 0.182f);
+                    // striker.transform.localEulerAngles = new Vector3(-56f, 317f, 25f);
+
+                    IXRSelectInteractor interactor = rightHandInteractor as IXRSelectInteractor;
+                    IXRSelectInteractable interactable = cylinderGrabInteractable as IXRSelectInteractable;
+
+                    // *** Added this section to attach the cylinder to the hand ***
+                    if (interactor != null && interactable != null)
+                    {
+                        // Manually start interaction using the new method
+                        interactionManager.SelectEnter(interactor, interactable);
+                    }
 
                     if (m_Highlight)
                         m_Highlight.enabled = true;
