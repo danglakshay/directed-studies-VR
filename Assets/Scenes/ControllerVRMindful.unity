@@ -2516,6 +2516,89 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 490331265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &538445877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 54.015
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.079
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 64.85
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.41779646
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.41794235
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.57052505
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5703259
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 72.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3133296d0a0bfa54ab2b0ca65aae8c09,
+        type: 3}
+      propertyPath: m_Name
+      value: Toby the Cat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3133296d0a0bfa54ab2b0ca65aae8c09, type: 3}
 --- !u!1001 &570356348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8123,3 +8206,4 @@ SceneRoots:
   - {fileID: 1811653591}
   - {fileID: 930645905}
   - {fileID: 1212799118}
+  - {fileID: 538445877}
