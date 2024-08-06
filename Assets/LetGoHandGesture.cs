@@ -219,12 +219,7 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
                 {
                     m_GesturePerformed?.Invoke();
                     m_PerformedTriggered = true;
-                    //m_Background.color = m_BackgroundHighlightColor;
 
-                    //Attaching striker to right hand
-                    // striker.transform.parent = rightHand.transform;
-                    // striker.transform.localPosition = new Vector3(0.007f, -0.093f, 0.182f);
-                    // striker.transform.localEulerAngles = new Vector3(-56f, 317f, 25f);
 
                     IXRSelectInteractor interactor = rightHandInteractor as IXRSelectInteractor;
                     IXRSelectInteractable interactable = cylinderGrabInteractable as IXRSelectInteractable;
@@ -232,8 +227,11 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
                     // *** Added this section to attach the cylinder to the hand ***
                     if (interactor != null && interactable != null)
                     {
-                        // Manually start interaction using the new methods
-                        interactionManager.SelectExit(interactor, interactable);
+                        if (interactor.isSelectActive)
+                        {
+                            // Manually start interaction using the new methods
+                            interactionManager.SelectExit(interactor, interactable);
+                        }
                     }
 
                     if (m_Highlight)

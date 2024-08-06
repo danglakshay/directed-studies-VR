@@ -37,15 +37,15 @@ public class PlaySoundOnCollision : MonoBehaviour
             
             bowlPosition = transform.position;
             
-            Renderer renderer = transform.GetComponent<Renderer>();
-            float bowlWidth = renderer.bounds.size.x;
+            Renderer bowlRenderer = transform.GetComponent<Renderer>();
+            float bowlWidth = bowlRenderer.bounds.size.x;
             float bowlRadius = bowlWidth / 2;
             
             
             distanceFromCenter = Vector3.Distance(bowlPosition, strikerPosition);
             
             
-            Debug.Log("Striker to Bowl Distance: " + distanceFromCenter + "| Bowl Radius:" + bowlRadius );
+            //Debug.Log("Striker to Bowl Distance: " + distanceFromCenter + "| Bowl Radius:" + bowlRadius );
 
             if (distanceFromCenter < bowlRadius)
             {
@@ -53,7 +53,7 @@ public class PlaySoundOnCollision : MonoBehaviour
             }
             else
             {
-                Debug.Log("HIT");
+                //Debug.Log("HIT");
                 if (strikeAudioSource.isPlaying)
                 { 
                     strikeAudioSource.Stop(); 
