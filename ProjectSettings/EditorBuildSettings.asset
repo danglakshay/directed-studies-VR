@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Interaction Demo.unity
     guid: 83000517cf4ec3140afb12e9330afa72
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ControllerVRMindful.unity
     guid: dbe1023b68b1a684c87774751968fb0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HandVRMindful.unity
     guid: 6c19a3da5ccfb7c4fbdf0e88e2a20367
   m_configObjects:

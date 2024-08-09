@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: oviLab
-  productName: VRMindful-Hand
+  productName: VRMindful-Controller
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -140,9 +140,7 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
-  preloadedAssets:
-  - {fileID: -3234324283193190213, guid: b6bab0f02f381ee4bb6f691c2cb48907, type: 2}
-  - {fileID: 5827303580437813968, guid: 5b72b28aacfd20349b11f4c64a98d1e4, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -163,7 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.oviLab.VRMindfulHand
+    Android: com.oviLab.VRMindfulController
     Standalone: com.oviLab.DirectedStudies
     iPhone: com.Unity-Technologies.com.unity.template.urp-blank
   buildNumber:
