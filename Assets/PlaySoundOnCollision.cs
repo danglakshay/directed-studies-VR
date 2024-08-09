@@ -53,16 +53,17 @@ public class PlaySoundOnCollision : MonoBehaviour
             }
             else
             {
-                //Debug.Log("HIT");
-                if (strikeAudioSource.isPlaying)
-                { 
-                    strikeAudioSource.Stop(); 
-                    strikeAudioSource.Play();
-                }
-                else 
-                { 
-                    strikeAudioSource.Play();
-                }
+                strikeAudioSource.Play();
+                // //Debug.Log("HIT");
+                // if (strikeAudioSource.isPlaying)
+                // {
+                //     strikeAudioSource.Stop();
+                //     strikeAudioSource.Play();
+                // }
+                // else
+                // {
+                //     strikeAudioSource.Play();
+                // }
             }
             
             
